@@ -3,9 +3,12 @@ class Enemy:
                  enemy_type: str,
                  deffense_points: int = 10,
                  attack_points: int = 15):
-        self.enemy_type = enemy_type
+        self.__enemy_type = enemy_type
         self.deffense_points = deffense_points
         self.attack_points = attack_points
+
+    def get_enemy_type(self):
+        return self.__enemy_type
 
     def talk(self):
         print('Enemy talks.')
