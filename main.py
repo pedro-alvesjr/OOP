@@ -10,5 +10,9 @@ print(f'{zombie.get_enemy_type()} has {zombie.deffense_points} defense points, '
 print(f'{ogre.get_enemy_type()} has {ogre.deffense_points} defense points, '
     f'and {ogre.attack_points} attack points.')
 
-zombie.talk()
-ogre.destroy()
+def battle(e: Enemy):
+    e.talk()
+    e.attack()
+
+battle(zombie)
+battle(ogre)
